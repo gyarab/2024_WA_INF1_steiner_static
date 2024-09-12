@@ -4,4 +4,5 @@ TEST
 **funguje to**
 
 ASt
-informace
+<p>Toto je odstavec</p>
+Pokus dalsi
