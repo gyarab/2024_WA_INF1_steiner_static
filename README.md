@@ -5,4 +5,14 @@ TEST
 
 ASt
 <p>Toto je odstavec</p>
-Pokus dalsi
+
+***Jupí***
+
+<ol>
+    <li>cd - adresar</li>
+    <li>git add index.html</li>
+    <li>git reset index.htlm</li>
+    <li>git commit -m "neco"</li>
+    <li>git push</li>
+    <li>git pull</li>
+</ol>
