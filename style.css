@@ -1,0 +1,163 @@
+* {
+    color: rgb(0, 0, 0); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #0a0a0a;
+        --color-secondary: #339eff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-primary: #ffffff;
+        --color-secondary: #ff7e33;
+    }
+}
+
+.light-mode {
+    --color-primary: rgb(224, 234, 255);
+    --color-secondary: hsl(100, 100%, 13%);
+}
+
+.dark-mode {
+    --color-primary: #0a0a0a;
+    --color-secondary: #f1f1f1;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-family: Poppins;
+}
+
+header{ 
+    background-color: #dbdbdb !important;
+    background-image: url("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    border: 4px solid rgb(0, 128, 0);
+}
+
+img {
+    width: 300px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  /* Při najetí myši na obrázek */
+img:hover {
+    transform: scale(1.2); /* Zvětší obrázek */
+    opacity: 1;          /* Sníží průhlednost */
+  }
+
+img.clicked{
+    position: relative;
+    animation-name: example;
+    transform: rotateX(150deg);
+    animation-duration: 4s;
+}
+
+
+
+h1{
+    color: rgb(0, 128, 0);
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: bold;
+}
+/*
+body{
+    background-color: rgb(224, 234, 255);
+    color: hsl(100, 100%, 13%);
+    font-family: Poppins;
+}
+*/
+
+p{
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+p ~ ul {
+    background-color: gold;
+    border: 1px solid gray;
+}
+
+div > p {
+    background-color: rgba(30, 175, 7, 0.386);
+}
+
+div  tr {
+    background-color: rgb(138, 203, 130);
+}
+
+th, td .table {
+    border-bottom: 4px solid #04450f;
+    border-left: 4px solid #04450f;
+  }
+
+
+.txtAni{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.odsaz{
+    text-indent: 10px;
+}
+
+.smc{
+    line-height: 2;
+}
+
+.undr{
+    text-decoration: underline;
+}
+
+#zelene{
+    color: #006f04;
+}
+
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    25%   {left:200px; top:0px;}
+    50%   {left:200px; top:200px;}
+    75%   {left:0px; top:200px;}
+    100%   {left:0px; top:0px;}
+
+}
+
+.center {
+    text-align: center;
+}
+.box1 { 
+    border: 5px solid green;
+    margin-top: 25px; 
+    margin-right: 20px; 
+    margin-bottom: 25px; 
+    margin-left: 20px; 
+}
+.box2 { 
+    padding: 110px 50px 50px 110px;
+}
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
