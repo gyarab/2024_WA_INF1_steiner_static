@@ -1,28 +1,26 @@
-* {
-    color: rgb(0, 0, 0); 
-}
+
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-primary: #0a0a0a;
-        --color-secondary: #339eff;
+        --color-secondary: #c0c0c0;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --color-primary: #ffffff;
-        --color-secondary: #ff7e33;
+        --color-secondary: #000000;
     }
 }
 
 .light-mode {
-    --color-primary: rgb(224, 234, 255);
+    --color-primary: #dbdbdb;
     --color-secondary: hsl(100, 100%, 13%);
 }
 
 .dark-mode {
-    --color-primary: #0a0a0a;
+    --color-primary: #111b10;
     --color-secondary: #f1f1f1;
 }
 
@@ -33,12 +31,34 @@ body {
 }
 
 header{ 
-    background-color: #dbdbdb !important;
-    background-image: url("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png");
+    background-color: var(--color-secondary);
+    background-image: url("img/GeoForest.png");
     background-repeat: repeat-y;
-    background-position: right top;
+    background-position: center top;
     border: 4px solid rgb(0, 128, 0);
 }
+
+.button {
+    background-color: #005724;
+    font-size: 25px;
+    border-radius: 15px 50px 30px;
+    color: white;
+    text-align: center;
+    
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+.btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #085e00;
+  }
+  
+.btn:hover {
+    background-color: #007c29;
+    color: white;
+  }
 
 img {
     width: 300px;
@@ -47,7 +67,7 @@ img {
   
   /* Při najetí myši na obrázek */
 img:hover {
-    transform: scale(1.2); /* Zvětší obrázek */
+    transform: scale(1.8); /* Zvětší obrázek */
     opacity: 1;          /* Sníží průhlednost */
   }
 
@@ -80,8 +100,9 @@ p{
 }
 
 p ~ ul {
-    background-color: gold;
-    border: 1px solid gray;
+    background-color: rgb(5, 71, 21);
+    border: 5px solid rgb(0, 44, 11);
+    border-radius: 25px;
 }
 
 div > p {
@@ -131,12 +152,13 @@ th, td .table {
 .center {
     text-align: center;
 }
+
 .box1 { 
     border: 5px solid green;
-    margin-top: 25px; 
-    margin-right: 20px; 
-    margin-bottom: 25px; 
-    margin-left: 20px; 
+    border-radius: 4px;
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .box2 { 
     padding: 110px 50px 50px 110px;

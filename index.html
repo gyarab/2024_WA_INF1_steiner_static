@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="https://lh6.googleusercontent.com/proxy/uFCMHptQNiuwse18SFwFrGsTuSdSQLg5bsEcvuOzoW0gH8aUjgpOkiBIdEDHMK9vxc-npnGMZ_WFVthRjPbvYc9ihmuMixGdKFZ4E3IDxmRuVQ">
 
         <!-- Titulek  -->
         <title>
@@ -20,7 +21,7 @@
     <body>
     <!-- Označení informační části  -->
     <main>
-        <button id="theme">Change theme</button>
+        <button class="btn" id="theme" style="vertical-align:middle"><span>Tmavý/Světlý mód</span></button>
 
         <!-- Hlavička  -->
         <header>
@@ -29,7 +30,7 @@
                 document.getElementById("theme").addEventListener("click", function () {
                 if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.body.classList.toggle("light-mode");
                 else document.body.classList.toggle("dark-mode");
-  });
+            });
             </script>
             <h1>
                 <!-- Titulek  -->
@@ -136,7 +137,7 @@
 
         </p>
           
-        <div id=".table" class="box1">
+        <div id=".table" class="box1 centerTab">
             <table>
                 <div>
                 <section>
