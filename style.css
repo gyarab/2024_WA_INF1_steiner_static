@@ -1,4 +1,29 @@
 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #0a0a0a;
+        --color-secondary: #c0c0c0;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-primary: #ffffff;
+        --color-secondary: #000000;
+    }
+}
+
+.light-mode {
+    --color-primary: #dbdbdb;
+    --color-secondary: hsl(100, 100%, 13%);
+}
+
+.dark-mode {
+    --color-primary: #111b10;
+ 
+    --color-secondary: #f1f1f1;
+}
 body {
     background-color: var(--color-primary);
     color: var(--color-secondary);
