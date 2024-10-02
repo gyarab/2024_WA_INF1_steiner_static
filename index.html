@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="cs">
-    <!-- informace standatně neviditelné  -->
+
+    <!-- informace standardně neviditelné  -->
     <head>
-        <meta name="color-scheme" content="dark light" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" />
+        <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="https://lh6.googleusercontent.com/proxy/uFCMHptQNiuwse18SFwFrGsTuSdSQLg5bsEcvuOzoW0gH8aUjgpOkiBIdEDHMK9vxc-npnGMZ_WFVthRjPbvYc9ihmuMixGdKFZ4E3IDxmRuVQ">
+        <link rel="stylesheet" href="alt.css">
+		<link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Cache.png">
 
         <!-- Titulek  -->
         <title>
@@ -19,21 +19,21 @@
 
     <!-- Označení hlavní části  -->
     <body>
-    <!-- Označení informační části  -->
-    <main>
-        <button class="btn" id="theme" style="vertical-align:middle"><span>Tmavý/Světlý mód</span></button>
 
         <!-- Hlavička  -->
         <header>
+
+			<button class="btn" id="theme" style="vertical-align:middle"><span>Tmavý/Světlý mód</span></button>
 
             <script>
                 document.getElementById("theme").addEventListener("click", function () {
                 if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.body.classList.toggle("light-mode");
                 else document.body.classList.toggle("dark-mode");
-            });
+				});
             </script>
+
+            <!-- Titulek  -->
             <h1>
-                <!-- Titulek  -->
                 Geocaching - základní informace
             </h1>
 
@@ -41,495 +41,369 @@
             &nbsp;
             <div class="center"><img src="https://gpstracklog.com/wp-content/uploads/2014/07/geocaching-200.png" alt="GEOCACHING"></div>
             &nbsp;
-
-
         </header>
-        
-        <h2>
-                <!-- obsah  -->
-                Obsah
-        </h2>
-        <section>
-        <table>
-            <tr>
-                <td>
-                    <ol>
-                        <li><a href="#ZI">Základní informace</a></li>
-                        <li><a href="#PHpK">Pravidla hraní pro kačera</a></li>
-                        <li><a href="#PHpO">Pravidla hraní pro ownera</a></li>
-                        <li><a href="#PCa">Popis cache</a> 
-                        <ul>
-                            <li><a href="#Kr">Krabička</a></li>
-                            <li><a href="#O">Obsah</a></li>
-                            <li><a href="#DD">Další dělení</a>
-                                <ul>
-                                    <li><a href="#PV">Podle velikosti</a></li>
-                                    <li><a href="#PCh">Podle charakteru</a></li>
-                                    <li><a href="#POaT">Podle obtížnosti a terénu</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        </li>
-                        <li><a href="#HaS">Historie a součastnost</a></li>
-                        <li><a href="#Ko">Kontroverze</a></li>
-                        <li><a href="#Z">Zdroje</a></li>
-                    </ol>
-                </td>
-                <td>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </td>
-                <td>
-                    <p>
-                        <div class="box1">
-                            <div class="txtAni">
-                                <b>Klikni na Cache:</b>
-                            </div>
-                        </div>
 
-                    </p>
-                    <div class="center">
-                    <div class="animace">
-                    <img id="img" img src="https://lh6.googleusercontent.com/proxy/uFCMHptQNiuwse18SFwFrGsTuSdSQLg5bsEcvuOzoW0gH8aUjgpOkiBIdEDHMK9vxc-npnGMZ_WFVthRjPbvYc9ihmuMixGdKFZ4E3IDxmRuVQ" alt="Ikonka cache" style='vertical-align: middle; float: right;'/>
+        <!-- Označení informační části  -->
+		<main>
 
-                    <script>
-                        // Získání obrázku
-                        const image = document.getElementById('img');
+			<!-- obsah  -->
+			<section>
+
+				<h2>
+					Obsah
+				</h2>
+				
+				<table>
+					<tr>
+						<td>
+							<ol>
+								<li><a href="#ZI">Základní informace</a></li>
+								<li><a href="#PHpK">Pravidla hraní pro kačera</a></li>
+								<li><a href="#PHpO">Pravidla hraní pro ownera</a></li>
+								<li><a href="#PCa">Popis cache</a> 
+									<ul>
+										<li><a href="#Kr">Krabička</a></li>
+										<li><a href="#O">Obsah</a></li>
+										<li><a href="#DD">Další dělení</a>
+											<ul>
+											<li><a href="#PV">Podle velikosti</a></li>
+											<li><a href="#PCh">Podle charakteru</a></li>
+											<li><a href="#POaT">Podle obtížnosti a terénu</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#HaS">Historie a součastnost</a></li>
+								<li><a href="#Ko">Kontroverze</a></li>
+								<li><a href="#Z">Zdroje</a></li>
+							</ol>
+						</td>
+						<td>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</td>
+						<td>
+							<div class="box1">
+								<div class="txtAni">
+									<b>Klikni na Cache:</b>
+								</div>
+							</div>
+
+							<div class="center">
+								<div class="animace">
+									<img id="img" src="https://lh6.googleusercontent.com/proxy/uFCMHptQNiuwse18SFwFrGsTuSdSQLg5bsEcvuOzoW0gH8aUjgpOkiBIdEDHMK9vxc-npnGMZ_WFVthRjPbvYc9ihmuMixGdKFZ4E3IDxmRuVQ" alt="Ikonka cache" style='vertical-align: middle; float: right;'>
+
+									<script>
+										// Získání obrázku
+										const image = document.getElementById('img');
                     
-                        // Přidání eventu pro kliknutí
-                        image.addEventListener('click', () => {
-                          image.classList.toggle('clicked'); // Přidá nebo odstraní třídu 'clicked'
-                        });
-                      </script>
-                </div>
-            </div>
-                    
-                </td>
-            </tr>
-        </table>
-        </section>
+										// Přidání eventu pro kliknutí
+										image.addEventListener('click', () => {
+											image.classList.toggle('clicked'); // Přidá nebo odstraní třídu 'clicked'
+										});
+									</script>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</section>
 
-        <article>
+			<!-- Vlastní text rozdělený do artricles -->
 
-        <p id="ZI"></p>
+				<article>
+					<p id="ZI"></p>
 
-        <h2>
-            <br>
-            1&#41; Základní informace
+					<h2>
+						<br>
+						1&#41; Základní informace
+					</h2>
+					<hr>
 
-        </h2>
+					<div>
+						<p>
+							<b>Co je to vlastně ten Geocaching?</b>
+						</p>
+						<div class="odsaz">Jedná se o hru na pomezí sportu a turitiky. Hra spočívá v tom, že používáte globální družicový polohovéhový systém &#40; Spíše známe pod pojmem GPS &#41; k nalezení skryté schárnky, nazývané Cache, nebo česky keš. Ke kešce znáte její souřednice, ale jsou i typy, kde to neznáte &#40; Viz podkapitola charakter keše &#41;. K souřednicím se dostanete pomocí zařízení s GPSkou, tedy například mobilem.</div>
+					</div>
 
-        <hr>
+					<p>
+						<b>Jaká je hatmatilka lidí zapalných do geocachingu?</b>
+					</p>
 
-        <div>
-        <p>
-            <b>Co je to vlastně ten Geocaching?</b>
-        </p>
-        <p>
-            <div class="odsaz">Jedná se o hru na pomezí sportu a turitiky. Hra spočívá v tom, že používáte globální družicový polohovéhový systém &#40; Spíše známe pod pojmem GPS &#41; k nalezení skryté schárnky, nazývané Cache, nebo česky keš. Ke kešce znáte její souřednice, ale jsou i typy, kde to neznáte &#40; Viz podkapitola charakter keše &#41;. K souřednicím se dostanete pomocí zařízení s GPSkou, tedy například mobilem.</div>
+					<div class="odsaz">Mezi nejpoužívanější slovíčky jsou:</div>
 
-        </p>
-        </div>
-        <p>
-            <b>Jaká je hatmatilka lidí zapalných do geocachingu?</b>
-        </p>
-        <p>
-            <div class="odsaz">Mezi nejpoužívanější slovíčky jsou:</div>
+					<div id=".table" class="box1 centerTab">
+						<table>
+							<tr>
+								<th>Geocaching</th>
+								<th>Vysvětlení</th>
+							</tr>
+							<tr>
+								<td><div class="undr"> Geo+/kačer&#40;Geocacher&#41;</div></td>
+								<td> = ten co hledá kešky</td>
+							</tr>
+							<tr>
+								<td><div class="undr">Keška</div></td>
+								<td> = Schovaná krabička</td>
+							</tr>
+							<tr>
+								<td><div class="undr">Logbook</div></td>
+								<td> = Sešit nebo papír, kam se zapisují nálezy.</td>
+							</tr>
+							<tr>
+								<td><div class="undr">FTF &#40;First to Find&#41;</div></td>
+								<td> = První nálezce keše</td>
+							</tr>
+							<tr>
+								<td><div class="undr">TFTC &#40;Thanks For The Cache&#41;</div></td>
+								<td> = Díky za cache</td>
+							</tr>
+							<tr>
+								<td><div class="undr">DNF &#40; Did Not Find &#41;</div></td>
+								<td> = Keš nenalezena</td>
+							</tr>
+							<tr>
+								<td><div class="undr">Travel Bug &#40; TB &#41;</div></td>
+								<td> = Předmět s unikátním kódem, který putuje mezi kešemi.</td>
+							</tr>
+							<tr>
+								<td><div class="undr">Hint</div></td>
+								<td> = Doplňující nápověda ke nalezení keše.</td>
+							</tr>
+							<tr>
+								<td><div class="undr">Spoiler</div></td>
+								<td> = Informace, která přímo odhaluje místo keše.</td>
+							</tr>
+						</table>
+					</div>
+				</article>
 
-        </p>
-          
-        <div id=".table" class="box1 centerTab">
-            <table>
-                <div>
-                <section>
-                <tr>
-                    
-                    <th>Geocaching</th>
-                    <th>Vysvětlení</th>
-                    
-                </tr>
-                </section>
-                <tr>
+				<article>
+					<p id="PHpK"></p>
 
-                    <td><div class="undr"> Geo+/kačer&#40;Geocacher&#41;</div></td>
-                    <td> = ten co hledá kešky</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">Keška</div></td>
-                    <td> = Schovaná krabička</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">Logbook</div></td>
-                    <td> = Sešit nebo papír, kam se zapisují nálezy.</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">FTF &#40;First to Find&#41;</div></td>
-                    <td> = První nálezce keše</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">TFTC &#40;Thanks For The Cache&#41;</div></td>
-                    <td> = Díky za cache</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">DNF &#40; Did Not Find &#41;</div></td>
-                    <td> = Keš nenalezena</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">Travel Bug &#40; TB &#41;</div></td>
-                    <td> = Předmět s unikátním kódem, který putuje mezi kešemi.</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">Hint</div></td>
-                    <td> = Doplňující nápověda ke nalezení keše.</td>
-                </tr>
-                <tr>
-                    <td><div class="undr">Spoiler</div></td>
-                    <td> = Informace, která přímo odhaluje místo keše.</td>
-                </tr>
-            </div>
-            </table>
-        </div>
-        </article>
+					<h2>
+						<br>
+						2&#41; Pravidla hraní pro kačera
+					</h2>
+					<hr>
 
-        <p id="PHpK"></p>
+					<p>
+						<b>Jak se geocaching hraje?</b>
+					</p>
+					<p>
+					
+					<h3>
+					a&#41; Registrace na webu Geocaching
+					</h3>
+					<div class="odsaz">Nejprve se zaregistruj na oficiálním webu geocaching.com nebo stáhni aplikaci <a href="https://www.geocaching.com/">Geocaching</a>.
+					Po registraci získáš přístup k mapám a databázi keší po celém světě.</div>
+					
+					<h3>
+					b&#41; Vyber si keš
+					</h3>
+					<img src="https://images.squarespace-cdn.com/content/v1/59c1805d1f318d18472a1c00/1616705325358-NKE99SK9ZIQCIYK1YSHP/Geocaching_Premium_Icon_vFINAL_032118_Stacked.png" alt="Ikonka cache" style='width: 20%; vertical-align: middle; float: right;'>
+					<div class="odsaz">Pomocí mapy nebo aplikace &#40;buď Cgeo - free verze, nebo Locus - potřeba Geocaching premium = cca 1000 kč/rok&#41; si najdi keš v tvém okolí.
+					Keše jsou označeny GPS souřadnicemi, které tě dovedou na přibližné místo, kde je schovaná.</div>
+					
+					<h3>
+					c&#41; Připrav se na hledání
+					</h3>
+					<div class="odsaz">Nezapomeň si vzít GPS navigaci nebo chytrý telefon s GPS funkcí.
+					Některé keše mohou vyžadovat drobné vybavení (např. tužku na zapsání do logbooku).
+					Připrav se na dobrodružství venku, může to zahrnovat procházky lesem, výlety na hory, nebo hledání ve městě.</div>
 
-        <h2>
-            <br>
-            
-            2&#41; Pravidla hraní pro kačera
-            
-                
-        </h2>
-        
-        <hr>
+					<h3>
+					d&#41; Hledej keš
+					</h3>
+					<div class="odsaz">            Když dorazíš na místo podle GPS souřadnic, začni hledat keš.
+					Keše mohou být různě velké – od malých schránek o velikosti filmové krabičky po větší nádoby.
+					Přečti si popis keše a nápovědu, která ti může pomoci s hledáním.</div>
+					<h3>
+					e&#41; Nález keše
+					</h3>
+					<div class="odsaz">            Když keš najdeš, opatrně ji otevři. Většinou obsahuje:
+					Logbook (deník), do kterého se zapíšeš.
+					SWAG (malé předměty na výměnu), které můžeš vyměnit za jiné.
+					Pamatuj, že pokud něco z keše vezmeš, měl bys tam vložit něco v podobné hodnotě.</div>
+					<h3>
+					f&#41; Zapsání nálezu
+					</h3>
+					<div class="odsaz">Do logbooku v keši zapiš své uživatelské jméno a datum nálezu.
+					Poté keš pečlivě vrať zpět na její místo.
+					Následně zapiš svůj nález i na webu geocaching.com nebo v aplikaci. Případně můžeš přidat komentář nebo poděkování (TFTC – Thanks for the cache).</div>
+					
+					<h3>
+					g&#41; Další možnosti
+					</h3>
+					<div class="odsaz">Multikeš: Některé keše vyžadují návštěvu více stanovišť, kde postupně získáváš informace k nalezení finální keše.
+					Mystery keš: Pro nalezení některých keší je potřeba vyřešit hádanku nebo úkol.
+					Travel Bug a Geocoin: Pokud najdeš předmět s unikátním kódem (Travel Bug nebo Geocoin), můžeš ho vzít a přesunout do jiné keše. Cíl těchto předmětů je cestovat mezi kešemi a zaznamenávat svou cestu.</div>
+					
+					<h3>
+					h&#41; Respektuj pravidla
+					</h3>
+					<div class="odsaz">Respektuj přírodu a nepoškozuj okolí keší.
+					Pokud je keš poškozená, můžeš to oznámit majiteli keše (CO – Cache Owner).</div>				
+				</article>
 
-            <article>
-        <p>
-            <b>Jak se geocaching hraje?</b>
-        </p>
-        <p>
-            <h3>
-            a&#41; Registrace na webu Geocaching
-            </h3>
-            <div class="odsaz">Nejprve se zaregistruj na oficiálním webu geocaching.com nebo stáhni aplikaci <a href="https://www.geocaching.com/">Geocaching</a>.
-            Po registraci získáš přístup k mapám a databázi keší po celém světě.</div>
-            
-            <h3>
-            b&#41; Vyber si keš
-            </h3>
-            <img src="https://images.squarespace-cdn.com/content/v1/59c1805d1f318d18472a1c00/1616705325358-NKE99SK9ZIQCIYK1YSHP/Geocaching_Premium_Icon_vFINAL_032118_Stacked.png" alt="Ikonka cache" style='width: 20%; vertical-align: middle; float: right;'/>
-            <div class="odsaz">Pomocí mapy nebo aplikace &#40;buď Cgeo - free verze, nebo Locus - potřeba Geocaching premium = cca 1000 kč/rok&#41; si najdi keš v tvém okolí.
-            Keše jsou označeny GPS souřadnicemi, které tě dovedou na přibližné místo, kde je schovaná.</div>
-            
-            <h3>
-            c&#41; Připrav se na hledání
-            </h3>
-            <div class="odsaz">Nezapomeň si vzít GPS navigaci nebo chytrý telefon s GPS funkcí.
-            Některé keše mohou vyžadovat drobné vybavení (např. tužku na zapsání do logbooku).
-            Připrav se na dobrodružství venku, může to zahrnovat procházky lesem, výlety na hory, nebo hledání ve městě.</div>
+				<article>
+					<p id="PHpO"></p>
+					
+					<h2>
+						<br>
+						3&#41; Pravidla hraní pro ownera - majitele 
+					</h2>  
+					<hr>
+					
+					<p>
+						<b>Jaká jsou pravidla pro schovávání?</b>
+					</p>
+					<div class="odsaz">Cache musí být od sebe vzdálené minimálně 0,1 míle, což je 161 metrů. Keše schvaluje a publikuje reviewer. Revieweři jsou dobrovolníci, kteří mají na starost publikování keší ve stanoveném území. Umístění keše musí dodržovat veškeré místní zákony, na soukromém majetku vyžadují souhlas majitele objektu. Dle regionálních pravidel v Česku se nesmějí zakládat na hřbitovech, dětských hřištích, základních a mateřských školách, nesmějí být zakopané hluboko pod zemí, ve vojenských prostorech atd.</div>
+				</article>
 
-            <h3>
-            d&#41; Hledej keš
-            </h3>
-            <div class="odsaz">            Když dorazíš na místo podle GPS souřadnic, začni hledat keš.
-            Keše mohou být různě velké – od malých schránek o velikosti filmové krabičky po větší nádoby.
-            Přečti si popis keše a nápovědu, která ti může pomoci s hledáním.</div>
-            <h3>
-            e&#41; Nález keše
-            </h3>
-            <div class="odsaz">            Když keš najdeš, opatrně ji otevři. Většinou obsahuje:
-            Logbook (deník), do kterého se zapíšeš.
-            SWAG (malé předměty na výměnu), které můžeš vyměnit za jiné.
-            Pamatuj, že pokud něco z keše vezmeš, měl bys tam vložit něco v podobné hodnotě.</div>
-            <h3>
-            f&#41; Zapsání nálezu
-            </h3>
-            <div class="odsaz">Do logbooku v keši zapiš své uživatelské jméno a datum nálezu.
-            Poté keš pečlivě vrať zpět na její místo.
-            Následně zapiš svůj nález i na webu geocaching.com nebo v aplikaci. Případně můžeš přidat komentář nebo poděkování (TFTC – Thanks for the cache).</div>
-            
-            <h3>
-            g&#41; Další možnosti
-            </h3>
-            <div class="odsaz">Multikeš: Některé keše vyžadují návštěvu více stanovišť, kde postupně získáváš informace k nalezení finální keše.
-            Mystery keš: Pro nalezení některých keší je potřeba vyřešit hádanku nebo úkol.
-            Travel Bug a Geocoin: Pokud najdeš předmět s unikátním kódem (Travel Bug nebo Geocoin), můžeš ho vzít a přesunout do jiné keše. Cíl těchto předmětů je cestovat mezi kešemi a zaznamenávat svou cestu.</div>
-            
-            <h3>
-            h&#41; Respektuj pravidla
-            </h3>
-            <div class="odsaz">Respektuj přírodu a nepoškozuj okolí keší.
-            Pokud je keš poškozená, můžeš to oznámit majiteli keše (CO – Cache Owner).</div>
-            
-            </article>
-            <p id="PHpO"></p>
-            <article>
-        <h2>
-            <br>
-            3&#41; Pravidla hraní pro ownera - majitele 
-        </h2>  
+				<article>
+					<p id="PCa"></p>
 
-            <hr>
-            <p>
-                <b>Jaká jsou pravidla pro schovávání?</b>
-            </p>
-            <p>
-                <div class="odsaz">Cache musí být od sebe vzdálené minimálně 0,1 míle, což je 161 metrů. Keše schvaluje a publikuje reviewer. Revieweři jsou dobrovolníci, kteří mají na starost publikování keší ve stanoveném území. Umístění keše musí dodržovat veškeré místní zákony, na soukromém majetku vyžadují souhlas majitele objektu. Dle regionálních pravidel v Česku se nesmějí zakládat na hřbitovech, dětských hřištích, základních a mateřských školách, nesmějí být zakopané hluboko pod zemí, ve vojenských prostorech atd.</div>
-                
-            </p>
-        </article>
+					<h2>
+						<br>
+						Popis cache   
+					</h2>         
+					<hr>
 
-        <p id="PCa"></p>
-
-        <article>
-        <h2>
-            <br>
-            Popis cache   
-        </h2> 
-        
-        <hr>
-
-        <p id="Kr"></p>
-
-            <h3>
-                a&#41; Cache
-
-            </h3>  
-                <p>
+					<p id="Kr"></p>
+					<h3>
+						a&#41; Cache
+					</h3>  
                     <div class="odsaz">Cache bývá voděvzdorná, většinou plastová schránka, kanystr, apod. Zakladatel cache (owner – majitel) po jejím umístění zveřejní její souřadnice na některý internetový server zabývající se geocachingem. Schránka by měla být dostatečně veliká, aby se do ní vešel deník (tzv. logbook), do něhož se zapisují její nálezci. Bývá zvykem umísťovat do cache také nějaké předměty na výměnu. Nálezce cache si smí takový předmět vzít (a například přenést do další cache), ale musí místo něj vložit něco vlastního (jiný předmět) pro další účastníky hry, o stejné nebo vyšší hodnotě. 
                     </div>
-                </p>
 
-                <p id="O"></p>
+					<p id="O"></p>
+					<h3>
+						b&#41; Obsah
+					</h3>  
+					<hr>
+					<div class="center">
+					<img src="https://shop.geocaching.com/media/catalog/product/cache/3a3b45b9166fa8e39a6b1ff4bb69f102/h/i/hide-medium-desert-camo.jpg" alt="Obsah Cache">
+					</div>
+					<hr>
+					<div class="odsaz">Schránka by měla vždy obsahovat alespoň logbook a informaci pro náhodné nálezce („<i>mudlokarta</i>“). Schránka (nebo alespoň logbook) by měla být jednoznačně označena názvem keš či Official Geocache.</div>
+					<div class="odsaz">Vhodným doplňkem základního obsahu keše je pak ještě tužka, uzavíratelný plastový sáček pro vodotěsné uložení logbooku a tužky a náhradní plastový sáček pro zabalení schránky (pokud je schránka od zakladatele takovým sáčkem opatřena).</div>
+					<div class="odsaz">Logbook, mudlokarta, vlastní schránka, obal, tužka, případně ořezávátko je stálou součástí keše, a nesmí se z ní odnášet, ani výměnou za jiné předměty!</div>
+					<div class="odsaz">Pokud to rozměry schránky cache dovolí, může zakladatel keše přiložit drobné předměty na výměnu, nebo trackovatelné předměty (TB nebo GC – viz níže).</div>
+					<div class="odsaz">Pokud nálezce v keši neobjeví žádný předmět na výměnu, nebo se mu žádný nelíbí, nemusí si jej vzít. Může v keši ale zanechat jiný takový drobný předmět. Rozhodně by si ale neměl vzít žádný předmět z keše, aniž by do keše jiný předmět o stejné nebo vyšší hodnotě výměnou vložil. Celková hodnota obsahu cache se nesmí výměnou snížit. Vhodnost konkrétních předmětů pro vložení do keše je dána jednak velikostí schránky, ale také představou, že nejčastějšími geocachery, kteří se na výměnu těší, jsou malé děti. Naprosto nevhodné jsou tedy předměty jako peníze (s výjimkou symbolických platných mincí jako např. jednotlivé mince cizích měn), cigarety, plynové zapalovače, předměty s nemravným vyobrazením apod. Nepřípustné je vkládání jakýchkoliv potravin (žvýkačky, sušenky, bonbony…).</div>
 
-                <h3>
-                    b&#41; Obsah
-                </h3>  
-                <hr>
-                <div class="center">
-                <img src="https://shop.geocaching.com/media/catalog/product/cache/3a3b45b9166fa8e39a6b1ff4bb69f102/h/i/hide-medium-desert-camo.jpg" alt="Obsah Cache">
-                </div>
-                <hr>
-                    <p>
-                        <div class="odsaz">Schránka by měla vždy obsahovat alespoň logbook a informaci pro náhodné nálezce („<i>mudlokarta</i>“). Schránka (nebo alespoň logbook) by měla být jednoznačně označena názvem keš či Official Geocache.</div>
-                        
-                    </p>
-                    <p>
-                        <div class="odsaz">Vhodným doplňkem základního obsahu keše je pak ještě tužka, uzavíratelný plastový sáček pro vodotěsné uložení logbooku a tužky a náhradní plastový sáček pro zabalení schránky (pokud je schránka od zakladatele takovým sáčkem opatřena).</div>
-                        
-                    </p>
-                    <p>
-                        <div class="odsaz">Logbook, mudlokarta, vlastní schránka, obal, tužka, případně ořezávátko je stálou součástí keše, a nesmí se z ní odnášet, ani výměnou za jiné předměty!</div>
-                        
-                    </p>
-                    <p>
-                        <div class="odsaz">Pokud to rozměry schránky cache dovolí, může zakladatel keše přiložit drobné předměty na výměnu, nebo trackovatelné předměty (TB nebo GC – viz níže).</div>
-                        
-                    </p>
-                    <p>
-                        <div class="odsaz">Pokud nálezce v keši neobjeví žádný předmět na výměnu, nebo se mu žádný nelíbí, nemusí si jej vzít. Může v keši ale zanechat jiný takový drobný předmět. Rozhodně by si ale neměl vzít žádný předmět z keše, aniž by do keše jiný předmět o stejné nebo vyšší hodnotě výměnou vložil. Celková hodnota obsahu cache se nesmí výměnou snížit. Vhodnost konkrétních předmětů pro vložení do keše je dána jednak velikostí schránky, ale také představou, že nejčastějšími geocachery, kteří se na výměnu těší, jsou malé děti. Naprosto nevhodné jsou tedy předměty jako peníze (s výjimkou symbolických platných mincí jako např. jednotlivé mince cizích měn), cigarety, plynové zapalovače, předměty s nemravným vyobrazením apod. Nepřípustné je vkládání jakýchkoliv potravin (žvýkačky, sušenky, bonbony…). 
-                        </div>
-                    </p>
+					<p id="DD"></p>
+					<h3>
+						c&#41; Další dělení
+					</h3>  
 
-                    <p id="DD"></p>
+						<p id="PV"></p>
+						<h4>
+							ca&#41; Podle velikosti
+						</h4>
 
-                    <h3>
-                        c&#41; Další dělení
+						<hr>
+						<div class="center"><img src="img/GeoLarge.jpg" alt="LargaOfCache"></div>
+						<hr>
+						<div class="smc"><b>Nano</b> – nejmenší schránka. Nevejde se do ní tužka a většinou obsahuje pouze „<i>logbook</i>“, který je i tak velmi malý (příkladem může být i GeoKnots Logsheet Roller). Tato velikost nemá podporu na geocaching.com, proto jsou keše této velikosti uváděny buďto jako Micro nebo Other.</div>
+						<div class="smc"><b>Micro</b> – velmi malá schránka (podle pravidel menší než cca 1 dl, tzn. patří sem i tzv. „<i>nano-cache</i>“). Typicky lehce upravená a přizpůsobená krabička od filmu, od bonbonů tic-tac, od léků apod. Často je také používán prefabrikát PET lahví. Pro její možnost umístit ji nenápadně i do frekventovaných prostor se používá nejčastěji pro keše v centrech měst apod. Micro-cache bývá doplněna magnetem pro snadnější uchycení na kovových konstrukcích a bývá i velmi umně maskována tak, aby co nejlépe splynula s okolím. Pro svoji miniaturní velikost se do micro-cache zpravidla nemohou vkládat žádné předměty na výměnu, ale téměř výhradně pouze logbook a případně tužka.</div>
+						<div class="smc"><b>Malá</b> – malá schránka, přibližně o objemu malé krabice na ohřívání potravin v mikrovlnné troubě, která se také jako schránka často používá. Small-cache obsahuje logbook a menší předměty na výměnu.</div>
+						<div class="smc"><b>Střední</b> – schránka běžné velikosti, vejdou se do ní kromě logbooku i větší předměty na výměnu, malé plyšové hračky apod. Často se pro ni používají běžné krabice na ohřívání potravin v mikrovlnné troubě.</div>
+						<div class="smc"><b>Velká</b> – specializované výjimečné schránky, jejichž nadměrná velikost bývá zaměřena speciálně pro ukládání větších předmětů na výměnu (např. knih a CD).</div>
+						<div class="smc"><b>Other</b> – schránka neurčitelné velikosti. Může to být například placatá magnetická nálepka nebo kniha v knihovně. Nově se touto velikostí označují i earthcache a eventy.</div>
 
-                    </h3>  
+						<p id="PCh"></p>
+						<h4>
+							cb&#41; Podle charakteru
+						</h4>
 
-                    <p id="PV"></p>
+						<hr>
+						<div class="center"><img src="img/GeocacheTypes.jpg" alt="typecOfCache"></div>			
+						<hr>
+						<div class="smc"><b>Tradiční cache (český výraz tradička)</b> – schránka je umístěna přímo na místě definovaném souřadnicemi zveřejněnými registrovaným členům.</div>
+						<div class="smc"><b>Multi cache</b> – k nalezení cílové (tzv. finální) skrýše je potřeba nalézt nejprve skrýš první (či splnit úkol či vyluštit šifru) danou zveřejněnými souřadnicemi a z informací získaných v první skrýši nalézt skrýš finální, případně druhou, třetí a další, postupně je nutné se propracovat až na tzv. finální skrýš. Multi cache mohou mít mnoho podob, spojuje je ale shodná filosofie postupného hledání řetězce pomocných skrýší nebo plnění úkolů směřujících k nalezení skrýše hlavní. Jednotlivé pomocné skrýše se nazývají stage (z angl. stage, tj. stupeň).</div>
+						<div class="smc"><b>Mystery cache (český výraz mysterka)</b> – zveřejněné souřadnice ukazují zpravidla do blízkého okolí cache, ale skutečné souřadnice musí geocacher dopředu získat například prostudováním nějakých informací, vyluštěním hádanky, šifry apod. Někdy se též tato cache nazývá unknown (tj. neznámá).</div>
+						<div class="smc"><b>Webcam cache (český výraz webka)</b> – speciální cache, která neobsahuje ukrytou schránku, ale přivede geocachera před objektiv konkrétní popsané webkamery. K virtuálnímu „<i>odloví cache</i>“ pak stačí, aby jiná osoba snímek z webkamery dostupný na internetu uložila. Geocacher pak uložený snímek přiloží jako důkaz k elektronickému logu cache. Nové webcam cache již nelze od konce roku 2005 na serveru Geocaching.com zakládat.</div>
+						<div class="smc"><b>Letterbox hybrid</b> – Kombinace geocachingu a starší hry letterboxing. Hledání skrýše probíhá jen z části pomocí navigačního přístroje; z části pak podle různých indicií (např. slovní popis cesty, fotografie). Oproti tradiční cache obsahuje navíc razítko, které si nálezce může otisknout do svého deníčku.</div>
+						<div class="smc"><b>Virtuální cache (český výraz virtuálka)</b> – na zadaných souřadnicích není ukryta žádná skutečná schovaná schránka. Geocacher musí na hledaném místě něco zjistit (např. jména na pomníku apod.) a odeslat tyto informace ownerovi cache pro uznání logu. Tyto cache již není možné na geocaching.com zakládat, ale je možné je stále hledat. V srpnu 2017 dostalo 4000 geokačerů možnost založit novou virtuální kešku. Hráči s touto možností byli vybráni pomocí speciálního algoritmu, který hodnotil například kvalitu jimi založených kešek. Dále byli takto „<i>odměněni</i>“ hráči významně se podílející na chodu geocachingu. Tito hráči mohou svoji odměnu v podobě založení nové virtuálky uplatnit až do srpna 2018.</div>
+						<div class="smc"><b>Earthcache (český výraz earthka či "<i>zeměkeš</i>")</b> – obdoba virtuálních keší. Earthcache se zakládá v místech s geologickou či jinou zajímavostí týkající se planety Země. Podobně jako u virtuálních cachí není úkolem najít cache, ale dojít na dané místo, zjistit nějaké informace, udělat fotografie atd. Vždy záleží na zakladateli, jaké podmínky pro uznání logu stanoví.</div>
 
-                    <h4>
-                        ca&#41; Podle velikosti
-                    </h4>
+						<p id="POaT"></p>
+						<h3>
+							cc&#41;  Podle obtížnosti a terénu					
+						</h3>
+						
+						<hr>
+						<div class="center"><img src="img/GeoDifficulty.jpg" alt="DifficultyOfCache"></div>
+						<div class="center"><img src="img/GeoTerrain.jpg" alt="TerrainOfCache"></div>
+						<hr>
+						<div class="odsaz">S růstem popularity a dostupnosti geocachingu vznikla mezi částí geocacherů touha po větší exkluzivitě – touha po hledání geocache (tzv. kešek), které nedokáže dosáhnout každý a s jejichž odlovem je často spojena určitá míra adrenalinu, případně i obtížné luštění šifer. Tento typ kešky je některými geocachery nazýván drsnokeš. Možné umístění zahrnuje skály, přírodní i městské podzemí, nedostupné stromy atd. Tyto složitě dostupné kešky se v geocachingovém slangu označují jako tépětky (T5; mají nejvyšší terénní obtížnost – vyjádřenou stupněm 5).
+						</div>
+						<div class="odsaz">Každá keš má číselně označený terén a obtížnost. Škála je po polovinách celých čísel od 1 do 5.</div>
+				</article>
 
-                    <hr>
-                    <div class="center"><img src="img/GeoLarge.jpg" alt="LargaOfCache"></div>
-                    <hr>
+				<article>
+					<p id="HaS"></p>
 
-                        <p>
-                            <div class="smc"><b>Nano</b> – nejmenší schránka. Nevejde se do ní tužka a většinou obsahuje pouze „<i>logbook</i>“, který je i tak velmi malý (příkladem může být i GeoKnots Logsheet Roller). Tato velikost nemá podporu na geocaching.com, proto jsou keše této velikosti uváděny buďto jako Micro nebo Other.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Micro</b> – velmi malá schránka (podle pravidel menší než cca 1 dl, tzn. patří sem i tzv. „<i>nano-cache</i>“). Typicky lehce upravená a přizpůsobená krabička od filmu, od bonbonů tic-tac, od léků apod. Často je také používán prefabrikát PET lahví. Pro její možnost umístit ji nenápadně i do frekventovaných prostor se používá nejčastěji pro keše v centrech měst apod. Micro-cache bývá doplněna magnetem pro snadnější uchycení na kovových konstrukcích a bývá i velmi umně maskována tak, aby co nejlépe splynula s okolím. Pro svoji miniaturní velikost se do micro-cache zpravidla nemohou vkládat žádné předměty na výměnu, ale téměř výhradně pouze logbook a případně tužka.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Malá</b> – malá schránka, přibližně o objemu malé krabice na ohřívání potravin v mikrovlnné troubě, která se také jako schránka často používá. Small-cache obsahuje logbook a menší předměty na výměnu.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Střední</b> – schránka běžné velikosti, vejdou se do ní kromě logbooku i větší předměty na výměnu, malé plyšové hračky apod. Často se pro ni používají běžné krabice na ohřívání potravin v mikrovlnné troubě.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Velká</b> – specializované výjimečné schránky, jejichž nadměrná velikost bývá zaměřena speciálně pro ukládání větších předmětů na výměnu (např. knih a CD).</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Other</b> – schránka neurčitelné velikosti. Může to být například placatá magnetická nálepka nebo kniha v knihovně. Nově se touto velikostí označují i earthcache a eventy.</div>
-                            
-                        </p>
+					<h2>
+						<br>
+						4&#41; Historie a součastnost
+						</h2>
+					<hr>
+        
+					<p>
+						<b>Nyní něco o historii.</b>
+					</p>
+					<div class="odsaz">Geocaching vznikl v USA bezprostředně poté, co 1. května 2000 rozhodnutí tehdejšího amerického prezidenta Clintona odstranilo umělou odchylku, přidávanou do signálu GPS, a zlepšilo tak přesnost tohoto navigačního systému pro běžné civilní uživatele z desítek až stovek na několik metrů.</div>
+					<div class="odsaz">K červnu 2005 bylo ve 215 zemích na celém světě přes 171 000 skrýší pro geocaching, z toho zhruba 700 v Česku. V září roku 2006 vzrostl počet skrýší v Česku na celkem 2570 a český geocaching dále prožíval svůj boom, neboť v listopadu 2007 bylo na českém území zaregistrováno již přes 5600 skrýší. Na začátku března 2008 bylo na světě registrováno přes půl milionu míst, z toho 6600 v Česku. Podle statistik serveru geocaching.com najde alespoň jednu cache za týden v průměru kolem 50 tisíc lidí. V ČR bylo založeno do 30. listopadu 2008 11496 keší, a do 31. srpna 2009 15707 keší V červenci 2012 dosáhl počet keší na celém světě čísla 1,5 milionu. V lednu 2014 dosahuje počet keší v systému Geocaching.com celosvětově 2,3 milionu, počet geocacherů přes 6 milionů. Počet aktivních keší v ČR je na počátku roku 2015 přes 40 tisíc, aktivních geocacherů kolem dvaceti tisíc.</div>
+					<div class="odsaz">Komunita geocacherů organizuje rozmanité kolektivní akce („<i>setkávací</i>“ cache) s programem jako jsou např. úklidy v přírodě, geosetkání, geohry (viz výše CITO cache, Event cache).</div>
+					<div class="odsaz">Geocaching se těší velké popularitě zejména ve střední a severní Evropě. <mark>Nejvíce nálezů na světě má geocache na Karlově mostě v Praze</mark>.</div>
+				</article>
 
-                        <p id="PCh"></p>
+				<article>
+					<p id="Ko"></p>
 
-                    <h4>
-                        cb&#41; Podle charakteru
-                    </h4>
+					<h2>
+						<br>
+						5&#41; Kontroverze a problémy
+					</h2>
+					<hr>
 
-                    <hr>
-                    <div class="center"><img src="img/GeocacheTypes.jpg" alt="typecOfCache"></div>
-                    
-                    <hr>
+					<div class="odsaz">Cacheři při dohledávání geocache bývají konfrontováni policií, s dotazem, co provádí na místě keše. V jiných případech dohledávání geocache na místě uložení vyústilo v informování záchranných složek o podezřelé aktivitě. Došlo k tomu, že veřejné budovy či školy byly evakuovány, když učitelé či policejní jednotky objevili geocache, jako se stalo v případě střední školy Fairview High School v roce 2009. V několika případech byl obsah geocache zneškodněn pyrotechnickými jednotkami, protože existovalo podezření, že v krabičce je uschován nástražný výbušný systém. Rozličné oblasti, od starých hřbitovů po Disneyland, byly v důsledku nalezení geocache přechodně uzavřeny pro veřejnost.</div>
+					<hr>
+					<div class="center"><img src="https://cdn.xsd.cz/resize/e79f3ad1326c3451bad012272dcfb161_resize=682,524_.jpg?hash=b2190dd10cd4105cef8eb645c3bd51a9" alt="Obrázek pyrotechnika"></div>
+					<hr>
+					<div class="odsaz">Umístění geocachí bývá někdy terčem kritiky vládních orgánů či veřejnosti. Geocache bývají zaměněny s odpadem. Někteří geocacheři však při hledání geocache odpad z místa umístění naopak odnáší, tato praktika je úzce spojena s tzv. CITO eventy (Cache-In-Trash-Out). Eventy a geocache jsou často spojeny s ekologií a úklidem odpadu, mnoho oblastí tak vypadá čistěji, než bylo dříve a nejsou k tomu zapotřebí státní či lokální finanční zdroje. Geocaching není v USA protizákonný a obvykle je v případě, že je vysvětlen úředníkům, vnímán pozitivně. Nicméně, některá umístění geocache mohou být problematická. Ačkoliv je v pravidlech Groundspeaku zakázáno umisťovat geocache na soukromý majetek bez adekvátních povolení, tak se to stává a posléze je možné, že ostatní geocacheři mohou neoprávněně vniknout na cizí pozemek. Geocache také mohou být uschovány na místech, kde samotné dohledávání může vypadat podezřele (např. blízko škol, dětských hřišť, bank, soudů nebo v rezidentních oblastech). Podobný případ také může nastat, pokud je cache umístěna na místě, kde může být zaměněna za drogový balíček či bombu (speciálně v místech, kde se pohybuje mnoho lidí, pod mosty, poblíž bank, soudů či ambasád). I přes zmíněné problémy s odpadem či nástražnými výbušnými systémy, mohou někteří geocacheři umístit geocache na nebezpečná místa. Ukrytí geocache na těchto místech se nedoporučuje a webové stránky spojené s ukládáním geocachí se snaží vynutit dodržování pravidel a doporučují zakázat některé typy umístění. Nicméně, reviewři (uživatelé schvalující geocache) zpravidla nemohou přesně vidět kde a jak je každá jednotlivá geocache schovaná. Konečně, největší díl zodpovědnosti je na samotných geocacherech, mají možnosti reportovat problémy s umístěním geocache a také si musí počínat s nejvyšší opatrností.</div>
+					<div class="odsaz">Regionální pravidla pro ukládání geocachí mohou být poměrně komplexní. Například, ve Virginii Virginské Oddělení dopravy (Virginia Department of Transporation) a Agentura pro správu divoké přírody (Wildlife Management Agency) nedávno zakázali ukládání geocachí na všech územích pod kontrolou těchto organizací. Některá města a rekreační oblasti povolují ukládání geocachí s málo či žádnými omezeními, jiná však vyžadují komplikovaná povolení.</div>
+					<div class="odsaz">Rada Jižní Karolíny schválila v roce 2005 zákon č. 3777, ve kterém stojí: „<i>Je zakázáno provozovat geocaching či letterboxing na hřbitově nebo na historickém či archeologickém nalezišti nebo na nemovitosti veřejně označené jako historická památka bez přímého písemného svolení správce hřbitova či pozemku.</i>“ Zákon byl schválen při prvním čtení v Senátu a od té doby je platný.</div>
+					<div class="odsaz">Tři dospělí geocacheři, 24letá žena a její rodiče byli při hledání ammoboxu uvězněni v jeskyni a zachráněni hasiči v Rochesteru, ve státě New York. Mluvčí Rochesterských hasičů plk. Ted Kuppinger sdělil: „<i>Je to komplikované, protože pokud se snažíte najít něco takového, tak se pravděpodobně pokusíte překonat sami sebe a přeceníte svoje síly.</i>“</div>
+				</article>
+			
+				<article>
+			       <br>
+					<p id="Z"></p>
 
-                        <p>
-                            <div class="smc"><b>Tradiční cache (český výraz tradička)</b> – schránka je umístěna přímo na místě definovaném souřadnicemi zveřejněnými registrovaným členům.</div>
-                        </p>
-                        <p>
-                            <div class="smc"><b>Multi cache</b> – k nalezení cílové (tzv. finální) skrýše je potřeba nalézt nejprve skrýš první (či splnit úkol či vyluštit šifru) danou zveřejněnými souřadnicemi a z informací získaných v první skrýši nalézt skrýš finální, případně druhou, třetí a další, postupně je nutné se propracovat až na tzv. finální skrýš. Multi cache mohou mít mnoho podob, spojuje je ale shodná filosofie postupného hledání řetězce pomocných skrýší nebo plnění úkolů směřujících k nalezení skrýše hlavní. Jednotlivé pomocné skrýše se nazývají stage (z angl. stage, tj. stupeň).</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Mystery cache (český výraz mysterka)</b> – zveřejněné souřadnice ukazují zpravidla do blízkého okolí cache, ale skutečné souřadnice musí geocacher dopředu získat například prostudováním nějakých informací, vyluštěním hádanky, šifry apod. Někdy se též tato cache nazývá unknown (tj. neznámá).</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Webcam cache (český výraz webka)</b> – speciální cache, která neobsahuje ukrytou schránku, ale přivede geocachera před objektiv konkrétní popsané webkamery. K virtuálnímu „<i>odloví cache</i>“ pak stačí, aby jiná osoba snímek z webkamery dostupný na internetu uložila. Geocacher pak uložený snímek přiloží jako důkaz k elektronickému logu cache. Nové webcam cache již nelze od konce roku 2005 na serveru Geocaching.com zakládat.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Letterbox hybrid</b> – Kombinace geocachingu a starší hry letterboxing. Hledání skrýše probíhá jen z části pomocí navigačního přístroje; z části pak podle různých indicií (např. slovní popis cesty, fotografie). Oproti tradiční cache obsahuje navíc razítko, které si nálezce může otisknout do svého deníčku.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Virtuální cache (český výraz virtuálka)</b> – na zadaných souřadnicích není ukryta žádná skutečná schovaná schránka. Geocacher musí na hledaném místě něco zjistit (např. jména na pomníku apod.) a odeslat tyto informace ownerovi cache pro uznání logu. Tyto cache již není možné na geocaching.com zakládat, ale je možné je stále hledat. V srpnu 2017 dostalo 4000 geokačerů možnost založit novou virtuální kešku. Hráči s touto možností byli vybráni pomocí speciálního algoritmu, který hodnotil například kvalitu jimi založených kešek. Dále byli takto „<i>odměněni</i>“ hráči významně se podílející na chodu geocachingu. Tito hráči mohou svoji odměnu v podobě založení nové virtuálky uplatnit až do srpna 2018.</div>
-                            
-                        </p>
-                        <p>
-                            <div class="smc"><b>Earthcache (český výraz earthka či "<i>zeměkeš</i>")</b> – obdoba virtuálních keší. Earthcache se zakládá v místech s geologickou či jinou zajímavostí týkající se planety Země. Podobně jako u virtuálních cachí není úkolem najít cache, ale dojít na dané místo, zjistit nějaké informace, udělat fotografie atd. Vždy záleží na zakladateli, jaké podmínky pro uznání logu stanoví.</div>
-                            
-                        </p>
+					<h2>
+						7&#41; Zdroje <i class="fas fa-bars"></i>						
+					</h2>
+					<hr>
 
-                        <p id="POaT"></p>
+					<p>Z tohoto jsem vycházel:</p>
+					<ul>
+						<li><p><a href="https://cs.wikipedia.org/wiki/Geocaching">https://cs.wikipedia.org/wiki/Geocaching</a></p></li>
+						<li><p><a href="https://chatgpt.com/">https://chatgpt.com/</a></p></li>
+					</ul>
+					<div class="center"><img src="img/CatAndBook.png" alt="Kočka a kniha" style="width: 50%;"></div>
+					<div class="box2"></div>
+				</article>
+				
+		</main>
 
-                    <h3>
-                        cc&#41;  Podle obtížnosti a terénu
-                        
-                    </h3>  
-                    <hr>
-                    <div class="center"><img src="img/GeoDifficulty.jpg" alt="DifficultyOfCache"></div>
-                    <div class="center"><img src="img/GeoTerrain.jpg" alt="TerrainOfCache"></div>
-                    
-                    <hr>
-                        <p>
-                            <div class="odsaz">S růstem popularity a dostupnosti geocachingu vznikla mezi částí geocacherů touha po větší exkluzivitě – touha po hledání geocache (tzv. kešek), které nedokáže dosáhnout každý a s jejichž odlovem je často spojena určitá míra adrenalinu, případně i obtížné luštění šifer. Tento typ kešky je některými geocachery nazýván drsnokeš. Možné umístění zahrnuje skály, přírodní i městské podzemí, nedostupné stromy atd. Tyto složitě dostupné kešky se v geocachingovém slangu označují jako tépětky (T5; mají nejvyšší terénní obtížnost – vyjádřenou stupněm 5).
-                            </div>
-                        </p>
-                        <p>
-                            <div class="odsaz">Každá keš má číselně označený terén a obtížnost. Škála je po polovinách celých čísel od 1 do 5.</div>
-                             
-                        </p>
-        </article>
+        <!-- Označení konce dokumentu -->
+		<footer>
+			<p id="zelene" class="zelene">Vytvořeno Adamem Steinerem</p>
+		</footer>
 
-        <p id="HaS"></p>
-
-        <article>
-
-        <h2>
-            <br>
-            5&#41; Hisotrie a součastnost
-
-        </h2>
-        <hr>
-        <p>
-            <b>Nyní něco o historii.</b>
-        </p>
-        <p>
-            <div class="odsaz">Geocaching vznikl v USA bezprostředně poté, co 1. května 2000 rozhodnutí tehdejšího amerického prezidenta Clintona odstranilo umělou odchylku, přidávanou do signálu GPS, a zlepšilo tak přesnost tohoto navigačního systému pro běžné civilní uživatele z desítek až stovek na několik metrů.</div>
-            
-        <p>
-            <div class="odsaz">K červnu 2005 bylo ve 215 zemích na celém světě přes 171 000 skrýší pro geocaching, z toho zhruba 700 v Česku. V září roku 2006 vzrostl počet skrýší v Česku na celkem 2570 a český geocaching dále prožíval svůj boom, neboť v listopadu 2007 bylo na českém území zaregistrováno již přes 5600 skrýší. Na začátku března 2008 bylo na světě registrováno přes půl milionu míst, z toho 6600 v Česku. Podle statistik serveru geocaching.com najde alespoň jednu cache za týden v průměru kolem 50 tisíc lidí. V ČR bylo založeno do 30. listopadu 2008 11496 keší, a do 31. srpna 2009 15707 keší V červenci 2012 dosáhl počet keší na celém světě čísla 1,5 milionu. V lednu 2014 dosahuje počet keší v systému Geocaching.com celosvětově 2,3 milionu, počet geocacherů přes 6 milionů. Počet aktivních keší v ČR je na počátku roku 2015 přes 40 tisíc, aktivních geocacherů kolem dvaceti tisíc.</div>
-            
-        </p>
-        <p>
-            <div class="odsaz">Komunita geocacherů organizuje rozmanité kolektivní akce („<i>setkávací</i>“ cache) s programem jako jsou např. úklidy v přírodě, geosetkání, geohry (viz výše CITO cache, Event cache).</div>
-            
-        </p>
-        <p>
-            <div class="odsaz">Geocaching se těší velké popularitě zejména ve střední a severní Evropě. <mark>Nejvíce nálezů na světě má geocache na Karlově mostě v Praze</mark>.</div>
-            
-        </p>
-        </article>
-
-        <p id="Ko"></p>
-
-        <article>
-
-        <h2>
-            <br>
-            6&#41; Kontroverze a problémy
-        </h2>  
-
-        <hr>
-
-        <p>
-            <div class="odsaz">Cacheři při dohledávání geocache bývají konfrontováni policií, s dotazem, co provádí na místě keše. V jiných případech dohledávání geocache na místě uložení vyústilo v informování záchranných složek o podezřelé aktivitě. Došlo k tomu, že veřejné budovy či školy byly evakuovány, když učitelé či policejní jednotky objevili geocache, jako se stalo v případě střední školy Fairview High School v roce 2009. V několika případech byl obsah geocache zneškodněn pyrotechnickými jednotkami, protože existovalo podezření, že v krabičce je uschován nástražný výbušný systém. Rozličné oblasti, od starých hřbitovů po Disneyland, byly v důsledku nalezení geocache přechodně uzavřeny pro veřejnost.</div>
-            
-        </p>
-
-        <hr>
-            <div class="center"><img src="https://cdn.xsd.cz/resize/e79f3ad1326c3451bad012272dcfb161_resize=682,524_.jpg?hash=b2190dd10cd4105cef8eb645c3bd51a9" alt="Obrázek pyrotechnika"></div>
-        <hr>
-        <p>
-            <div class="odsaz">Umístění geocachí bývá někdy terčem kritiky vládních orgánů či veřejnosti. Geocache bývají zaměněny s odpadem. Někteří geocacheři však při hledání geocache odpad z místa umístění naopak odnáší, tato praktika je úzce spojena s tzv. CITO eventy (Cache-In-Trash-Out). Eventy a geocache jsou často spojeny s ekologií a úklidem odpadu, mnoho oblastí tak vypadá čistěji, než bylo dříve a nejsou k tomu zapotřebí státní či lokální finanční zdroje. Geocaching není v USA protizákonný a obvykle je v případě, že je vysvětlen úředníkům, vnímán pozitivně. Nicméně, některá umístění geocache mohou být problematická. Ačkoliv je v pravidlech Groundspeaku zakázáno umisťovat geocache na soukromý majetek bez adekvátních povolení, tak se to stává a posléze je možné, že ostatní geocacheři mohou neoprávněně vniknout na cizí pozemek. Geocache také mohou být uschovány na místech, kde samotné dohledávání může vypadat podezřele (např. blízko škol, dětských hřišť, bank, soudů nebo v rezidentních oblastech). Podobný případ také může nastat, pokud je cache umístěna na místě, kde může být zaměněna za drogový balíček či bombu (speciálně v místech, kde se pohybuje mnoho lidí, pod mosty, poblíž bank, soudů či ambasád). I přes zmíněné problémy s odpadem či nástražnými výbušnými systémy, mohou někteří geocacheři umístit geocache na nebezpečná místa. Ukrytí geocache na těchto místech se nedoporučuje a webové stránky spojené s ukládáním geocachí se snaží vynutit dodržování pravidel a doporučují zakázat některé typy umístění. Nicméně, reviewři (uživatelé schvalující geocache) zpravidla nemohou přesně vidět kde a jak je každá jednotlivá geocache schovaná. Konečně, největší díl zodpovědnosti je na samotných geocacherech, mají možnosti reportovat problémy s umístěním geocache a také si musí počínat s nejvyšší opatrností.
-            </div>
-        </p>
-        <p>
-            <div class="odsaz">Regionální pravidla pro ukládání geocachí mohou být poměrně komplexní. Například, ve Virginii Virginské Oddělení dopravy (Virginia Department of Transporation) a Agentura pro správu divoké přírody (Wildlife Management Agency) nedávno zakázali ukládání geocachí na všech územích pod kontrolou těchto organizací. Některá města a rekreační oblasti povolují ukládání geocachí s málo či žádnými omezeními, jiná však vyžadují komplikovaná povolení.</div>
-            
-        </p>
-        <p>
-            <div class="odsaz">Rada Jižní Karolíny schválila v roce 2005 zákon č. 3777, ve kterém stojí: „<i>Je zakázáno provozovat geocaching či letterboxing na hřbitově nebo na historickém či archeologickém nalezišti nebo na nemovitosti veřejně označené jako historická památka bez přímého písemného svolení správce hřbitova či pozemku.</i>“ Zákon byl schválen při prvním čtení v Senátu a od té doby je platný.</div>
-            
-        </p>
-        <p>
-            <div class="odsaz">Tři dospělí geocacheři, 24letá žena a její rodiče byli při hledání ammoboxu uvězněni v jeskyni a zachráněni hasiči v Rochesteru, ve státě New York. Mluvčí Rochesterských hasičů plk. Ted Kuppinger sdělil: „<i>Je to komplikované, protože pokud se snažíte najít něco takového, tak se pravděpodobně pokusíte překonat sami sebe a přeceníte svoje síly.</i>“</div>
-            
-        </p>
-        </article>
-
-    </main>
-
-        <article>
-            <br>
-
-            <p id="Z"></p>
-
-            <h2>
-                7&#41; Zdroje <i class="fas fa-bars"></i>
-                
-            </h2>
-
-            <hr>
-
-            <p>Z tohoto jsem vycházel:</p>
-
-            <ul>
-                <li><p>
-                    <a href="https://cs.wikipedia.org/wiki/Geocaching">https://cs.wikipedia.org/wiki/Geocaching</a>
-                </p></li>
-                <li><p><a href="https://chatgpt.com/">https://chatgpt.com/</a></p></li>
-            </ul>
-
-            <div class="center"><img src="img/CatAndBook.png" alt="Kočka a kniha" style="width: 50%;"></div>
-        </article>
-        <div class="box2"></div>
-    <footer>
-        <p id="zelene" class="zelene">Vytvořeno Adamem Steinerem</p>
-    </footer>
-      
     </body>
-
 </html>
 	
