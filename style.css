@@ -113,7 +113,7 @@ div > p {
 }
 
 div  tr {
-    background-color: rgb(138, 203, 130);
+    background-color: rgb(93, 187, 80);
 }
 
 th, td .table {
@@ -154,6 +154,29 @@ th, td .table {
 
 .center {
     text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100vh;
+}
+.container .item{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+
+.container .item:nth-child(2){
+    flex-grow: 1;
+}
+
+.container .item:nth-child(3){
+    flex-grow: 4;
+}
+
+.container .item:nth-child(4){
+    flex-shrink: 4;
 }
 
 .box1 { 
