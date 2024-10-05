@@ -156,6 +156,7 @@ th, td .table {
     text-align: center;
 }
 
+
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -166,17 +167,13 @@ th, td .table {
     padding: 10px;
 }
 
-
-.container .item:nth-child(2){
-    flex-grow: 1;
+.container .item p{
+    border: 5px solid rgb(5, 58, 5);
+    border-radius: 4px;
 }
 
-.container .item:nth-child(3){
-    flex-grow: 4;
-}
-
-.container .item:nth-child(4){
-    flex-shrink: 4;
+.container .item img{
+    padding-top: 10%;
 }
 
 .box1 { 
