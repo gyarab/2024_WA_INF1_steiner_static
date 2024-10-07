@@ -1,18 +1,17 @@
-TEST   
+Informace o složce  
 =========
 
-**funguje to**
+## Obecně
+Obsah této složky **2024_WA_INF1_STEINER_ADAM**, vznikal v roce 2024/2025 Adamem Steinerem, žákem 3.E, vytvořena na pokyn **učitele Kamila Foltina**. 
 
-ASt
-<p>Toto je odstavec</p>
+### Obsah
+ - Úkol 1. - HTML Stránka
+ - Úkol 2. - CSS
+ - ***Úkol 2. - Layout***
 
-***Jupí***
+\
+&nbsp;
+\
+&nbsp;
 
-<ol>
-    <li>cd - adresar</li>
-    <li>git add index.html</li>
-    <li>git reset index.htlm</li>
-    <li>git commit -m "neco"</li>
-    <li>git push</li>
-    <li>git pull</li>
-</ol>
+Vyrobeno 07.10.2024, upraveno 07.10.2024
