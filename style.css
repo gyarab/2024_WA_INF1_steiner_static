@@ -65,6 +65,15 @@ img {
     width: 300px;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
+
+.image p{
+    position: absolute; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+}
   
   /* Při najetí myši na obrázek */
 img:hover {
@@ -80,7 +89,7 @@ img.clicked{
 }
 
 h1{
-    color: rgb(0, 128, 0);
+    color: rgba(20, 146, 20, 0.486);
     font-family: Poppins;
     font-size: 40px;
     font-weight: bold;
@@ -99,7 +108,7 @@ p{
 }
 
 p ~ ul {
-    background-color: rgb(5, 71, 21);
+    background-color: rgb(18, 109, 40);
     border: 5px solid rgb(0, 44, 11);
     border-radius: 25px;
 }
@@ -190,6 +199,7 @@ div.FP {
     position: sticky;
     top: 0;
     padding: 5px;
+    z-index: 2;
     background-color: #cae8ca;
     border: 2px solid #4CAF50;
   }
@@ -264,6 +274,27 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #f3f3f3;
+    z-index: 9999;
+  }
+  
+  .progress-bar {
+    height: 150%;
+    background-color: #1c801f;
+    width: 0;
+  }
+  
+  .content {
+    padding: 0px;
+  }
+
 
 @media (prefers-color-scheme: dark) {
     :root {

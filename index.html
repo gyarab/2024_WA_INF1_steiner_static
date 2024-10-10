@@ -19,6 +19,7 @@
 
     <!-- Označení hlavní části  -->
     <body>
+		<div class="content"></div>
 
 		<p id="Be"></p>
 
@@ -43,7 +44,9 @@
 
 		</div>
         <header>
-
+			<div class="progress-container">
+				<div class="progress-bar" id="progress-bar"></div>
+			  </div>
 			
 
             <script>
@@ -51,6 +54,18 @@
                 if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.body.classList.toggle("light-mode");
                 else document.body.classList.toggle("dark-mode");
 				});
+
+
+				window.onscroll = function() {
+					updateProgressBar();
+				};
+
+				function updateProgressBar() {
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+					var scrollPercent = (scrollTop / scrollHeight) * 100;
+					document.getElementById("progress-bar").style.width = scrollPercent + "%";
+				}
             </script>
 
             <!-- Titulek  -->
@@ -302,7 +317,12 @@
 					</h3>  
 					<hr>
 					<div class="center">
-					<img src="https://shop.geocaching.com/media/catalog/product/cache/3a3b45b9166fa8e39a6b1ff4bb69f102/h/i/hide-medium-desert-camo.jpg" alt="Obsah Cache">
+						<div class=".image">
+							<img src="https://shop.geocaching.com/media/catalog/product/cache/3a3b45b9166fa8e39a6b1ff4bb69f102/h/i/hide-medium-desert-camo.jpg" alt="Obsah Cache">
+							<p>
+								Ilustační fotka obsahu cache
+							</p>
+						</div>
 					</div>
 					<hr>
 					<div class="odsaz">Schránka by měla vždy obsahovat alespoň logbook a informaci pro náhodné nálezce („<i>mudlokarta</i>“). Schránka (nebo alespoň logbook) by měla být jednoznačně označena názvem keš či Official Geocache.</div>
@@ -422,7 +442,6 @@
 		<footer>
 			<p id="zelene" class="zelene">Vytvořeno Adamem Steinerem</p>
 		</footer>
-
     </body>
 </html>
 	
