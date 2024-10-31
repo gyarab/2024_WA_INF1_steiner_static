@@ -51,7 +51,7 @@ function stav(radky, sloupce, pocet){
         let sloRad = Math.floor(Math.random() * sloupce);
         console.log(radRad + " a " + sloRad);
         if((pole[radRad][sloRad] != 9) && (pole[radRad][sloRad] != null)){
-            pole[radRad][sloRad] = 9;
+            pole[radRad][sloRad] += 9;
             if((radRad+1 >= 0) && (sloRad >= 0) && (radRad+1 < radky) && (sloRad < sloupce)) pole[radRad+1][sloRad]++;             
             if((radRad-1 > 0) && (sloRad > 0) && (radRad-1 < radky) && (sloRad < sloupce)) pole[radRad-1][sloRad]++;
             if((radRad+1 >= 0) && (sloRad+1 >= 0) && (radRad+1 < radky) && (sloRad < sloupce+1)) pole[radRad+1][sloRad+1]++;
@@ -98,6 +98,9 @@ function vystav(radky, sloupce, pole) {
 }
 */
 
+//data info
+//data set
+
 function vystav(radky, sloupce, pole) {
     //element tabulka
     const table = document.createElement("table");
@@ -107,20 +110,57 @@ function vystav(radky, sloupce, pole) {
         const row = document.createElement("tr"); // Vytvoří nový řádek
         for (let j = 0; j < sloupce; j++) {
             const cell = document.createElement("td"); // Vytvoří buňku
-            cell.style.border = "1px solid black";
-            cell.style.padding = "10px";
+            const img = document.createElement("img");
+            cell.style.border = "0px solid black";
+            cell.style.padding = "2px";
+            console.log(pole[i][j])
 
+            if(pole[i][j] == 0){
+                // Vytvoří obrázek a nastaví jeho vlastnosti
+                console.log("jsem v metodě");
+                img.src = "img/ZBomb.png";
+                img.alt = `Nulla ${i + 1}, Sloupec ${j + 1}`;
+                img.style.width = "50px";
+                img.style.height = "50px";
+            } else
+
+            if((pole[i][j] > 0) || (pole[i][j] < 9)){
+                // Vytvoří obrázek a nastaví jeho vlastnosti
+                let index = pole[i][j];
+                img.src = "img/" + index + "Bomb.png";
+                img.alt = `Řádek ${i + 1}, Sloupec ${j + 1}`;
+                img.style.width = "50px";
+                img.style.height = "50px";
+            }
+
+            if(pole[i][j] >= 9){
+                // Vytvoří obrázek a nastaví jeho vlastnosti
+                let index = pole[i][j];
+                img.src = "img/Bomb.png";
+                img.alt = `Řádek ${i + 1}, Sloupec ${j + 1}`;
+                img.style.width = "50px";
+                img.style.height = "50px";
+            }
+
+            cell.appendChild(img);
+
+            row.appendChild(cell);
+
+            /*
             // Vytvoří obrázek a nastaví jeho vlastnosti
             const img = document.createElement("img");
-            img.src = "img/Bomb.png"; // Nahraďte URL_OBRÁZKU skutečnou URL
+            img.src = "img/Unknowpoint.png"; // Nahraďte URL_OBRÁZKU skutečnou URL
             img.alt = `Řádek ${i + 1}, Sloupec ${j + 1}`;
             img.style.width = "50px"; // Nastaví šířku obrázku
             img.style.height = "50px"; // Nastaví výšku obrázku
-
+            */
+           
             // Přidá obrázek do buňky
+            /*
             cell.appendChild(img);
 
             row.appendChild(cell); // Přidá buňku do řádku
+            */
         }
         table.appendChild(row); // Přidá řádek do tabulky
     }
