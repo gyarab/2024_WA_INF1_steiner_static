@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Bomb.png">
+
     <title>Minesweeper</title>
+
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="app">
         <h1>Minesweeper</h1>
         <p>Vyber obtížnost a hraj:</p>
-        <button onclick="strankoPrestup('Lehka')">Lehká úroveň</button>
-        <button onclick="strankoPrestup('Stredni')">Střední úroveň</button>
-        <button onclick="strankoPrestup('Tezka')">Těžká úroveň</button>
-
+        <div class="container">
+            <div class="item">
+                <button onclick="strankoPrestup('Lehka')">Lehká úroveň</button>
+            </div>
+            <div class="item">
+                <button onclick="strankoPrestup('Stredni')">Střední úroveň</button>
+            </div>
+            <div class="item">
+                <button onclick="strankoPrestup('Tezka')">Těžká úroveň</button>
+            </div>
+        </div>
         <!-- Načtení externího JavaScript souboru -->
         <script src="script.js" defer></script>
     </div>
