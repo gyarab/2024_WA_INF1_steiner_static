@@ -1,7 +1,11 @@
 var pulbPole = [];
 var odkryto = [];
 var vlajecka = [];
-var bombPole = [];
+var bombPole1 = [];
+var bombPole2 = [];
+var bombPole3 = [];
+var pracuj = true;
+var first = false;
 var sirka;
 var vyska;
 
@@ -44,7 +48,7 @@ function nacti(){
         }
         if(myParam == "Tezka"){
             console.log("tezka");
-            stav(16, 30, 99);
+            stav(16, 30, 300);
             sirka = 30;
             vyska = 16;
         }
@@ -55,19 +59,35 @@ function nacti(){
 window.onload = nacti();
 
 //hlavni tabulka
+//zde je chyba
 function stav(radky, sloupce, pocet){
-    //vytvoreni pole naplnene nulami
     let bomb = pocet;
-    const pole = poleVytvarec(radky, sloupce, 0);
+    console.log(bomb);
+    let pole = [];
+
+    if(first){
+        pole = Array.from(pulbPole);
+        console.log(pulbPole);
+        console.log(pole);
+    }
+
+    //pokud stavim znova, tak to obejdu
+    if(!first){
+    //vytvoreni pole naplnene nulami
+    pole = poleVytvarec(radky, sloupce, 0);
     console.log(pole);
+    }   
 
     while(bomb > 0){
         let radRad = Math.floor(Math.random() * radky);
         let sloRad = Math.floor(Math.random() * sloupce);
         console.log(radRad + " a " + sloRad);
+        console.log(pole[radRad][sloRad]);
         if((pole[radRad][sloRad] < 9) && (pole[radRad][sloRad] != null)){
             pole[radRad][sloRad] += 9;
-            bombPole.push(radRad + " + " + sloRad);
+            if((bombPole1.length + bombPole2.length + bombPole3.length) < 41) bombPole1.push(radRad + " + " + sloRad);
+            if(((bombPole1.length + bombPole2.length + bombPole3.length) > 40) && ((bombPole1.length + bombPole2.length + bombPole3.length) < 81)) bombPole2.push(radRad + " + " + sloRad);
+            if((bombPole1.length + bombPole2.length + bombPole3.length) > 80) bombPole3.push(radRad + " + " + sloRad);
             if((radRad+1 >= 0) && (sloRad >= 0) && (radRad+1 < radky) && (sloRad < sloupce)) pole[radRad+1][sloRad]++;             
             if((radRad-1 >= 0) && (sloRad >= 0) && (radRad-1 < radky) && (sloRad < sloupce)) pole[radRad-1][sloRad]++;
             if((radRad+1 >= 0) && (sloRad+1 >= 0) && (radRad+1 < radky) && (sloRad < sloupce+1)) pole[radRad+1][sloRad+1]++;
@@ -78,18 +98,21 @@ function stav(radky, sloupce, pocet){
             if((radRad >= 0) && (sloRad-1 >= 0) && (sloRad+1 >= 0) && (radRad < radky) && (sloRad-1 < sloupce)) pole[radRad][sloRad-1]++;
             bomb--;
         }
-        console.log("Bomby jsou rozmistene, a to na pozici: " + bombPole);
     }
 
-    pulbPole = pole;
+    pulbPole = Array.from(pole);
+    console.log("dojto")
     vystav(radky, sloupce, pole);
-
+    console.log("vystaveno");
+    
 }
 
 //vystavi tabuklu z pole
 function vystav(radky, sloupce, pole) {
     const table = document.createElement("table");
     table.style.borderCollapse = "collapse";
+    const errInfoElement = document.getElementById("ErrInfo");
+    const existingTable = errInfoElement.querySelector("table");
 
     for (let i = 0; i < radky; i++) {
         const row = document.createElement("tr");
@@ -122,7 +145,13 @@ function vystav(radky, sloupce, pole) {
     }
 
     //pridej do stranky
-    document.getElementById("ErrInfo").appendChild(table);
+        // Pokud již existuje `table` uvnitř `ErrInfo`, odstraní se
+        if (existingTable) {
+            errInfoElement.removeChild(existingTable);
+            }
+        
+        // Nyní přidáme nový `table`
+        errInfoElement.appendChild(table);
 }
 
 //otoceni policka
@@ -235,25 +264,93 @@ document.addEventListener('click', function(event) {
         let j = delidlo[2];
 
         //kotrola vyhry
-        console.log("kotrola vyhry: " + (vyska*sirka) + " == " + (odkryto.length + vlajecka.length) + " && " + vlajecka.length + " == " + bombPole.length);
-        if((vyska*sirka) == ((odkryto.length + vlajecka.length)) && (vlajecka.lengt == bombPole.lengt)){
+        console.log("kotrola vyhry: " + (vyska*sirka) + " == " + (odkryto.length + vlajecka.length) + " && " + vlajecka.length + " == " + bombPole1.length + bombPole2.length + bombPole3.length);
+        if((vyska*sirka) == ((odkryto.length + vlajecka.length)) && (vlajecka.lengt == (bombPole1.length + bombPole2.length + bombPole3.length))){
             console.log("---vyhra!---");
         }
 
+        console.log(pulbPole[i][j]);
         if((pulbPole[i][j] < 1)&&(!odkryto.includes(pozice))){
             console.log("mám " + pulbPole[i][j] + " a volnost!");
             odkryvac(i, j);
 
         }
 
-        if((pulbPole[i][j] > 8)&&(!odkryto.includes(pozice))){
+        if((pulbPole[i][j] > 8)&&(!odkryto.includes(pozice)&&(pracuj))){
+            //osetreni prvni hry
+            console.log("predmetoduji")
+            if(!first){
+                first = true;
+
+                console.log("Metoduji");
+                let pracPole = Array.from(pulbPole);
+                console.log(pulbPole);
+                alert(pulbPole);
+                pracPole[i][j] = pracPole[i][j]-9;
+                console.log(pracPole);
+                console.log("momenalně je na pracovím poli: " + pracPole[i][j]);
+                if(i != 0) pracPole[i-1][j] = pracPole[i-1][j]-1;
+                if(j != 0) pracPole[i][j-1]  = pracPole[i][j-1]-1;
+                if((i != 0) && (j != 0)) pracPole[i-1][j-1]  = pracPole[i-1][j-1]-1;
+                if(i != vyska) pracPole[i-0+1][j] = pracPole[i-0+1][j]-1;
+                if(j != sirka) pracPole[i][j-0+1] = pracPole[i][j-0+1]-1;
+                if((i != vyska) && (j != sirka)) pracPole[i-0+1][j+1]  = pracPole[i-0+1][j-0+1]-1;
+                if((i != 0) && (j != sirka)) pracPole[i-1][j-0+1] = pracPole[i-1][j-0+1]-1;
+                if((i != vyska) && (j != 0)) pracPole[i-0+1][j-1]  = pracPole[i-0+1][j-1]-1;
+
+                console.log(pracPole);
+
+                pulbPole = Array.from(pracPole);
+
+                console.log(bombPole1.length+bombPole2.length+bombPole3.length+1);
+
+                stav(vyska, sirka, 1);
+
+                document.getElementById(pozice).click();
+
+
+            }else{
+            
+            //hormadna detonace
+            pracuj = false;
             console.log("mám " + pulbPole[i][j] + " a Bombu!");
-            vybuch();
+            while((bombPole1.length + bombPole2.length + bombPole3.length) > 0){
+                if(bombPole3.length > 0){
+                    let poziceBomby = bombPole3[length];
+                    bombPole3 = bombPole3.filter(function(item) {
+                        return item !== poziceBomby;
+                    })
+                    console.log(bombPole3);
+                    console.log("vybuch na miste:" + poziceBomby);
+                    document.getElementById(poziceBomby).click();
+                }
+                if(bombPole2.length > 0){
+                    let poziceBomby = bombPole2[length];
+                    bombPole2 = bombPole2.filter(function(item) {
+                        return item !== poziceBomby;
+                    })
+                    console.log(bombPole2);
+                    console.log("vybuch na miste:" + poziceBomby);
+                    document.getElementById(poziceBomby).click();
+                }
+                if(bombPole1.length > 0){
+                    let poziceBomby = bombPole1[length];
+                    bombPole1 = bombPole1.filter(function(item) {
+                        return item !== poziceBomby;
+                    })
+                    console.log(bombPole1);
+                    console.log("vybuch na miste:" + poziceBomby);
+                    document.getElementById(poziceBomby).click();
+                }
+                
+            }
 
             //konec hry
             console.log("---Prohra!---");
         }
+        }
 
+        first = true;
         odkryto.push(pozice);
         
     }
@@ -296,18 +393,6 @@ function odkryvac(i, j){
     if((prava == 0)||((lokal == 0)&&(prava != -1)&&(prava < sirka))){
         console.log(prava);
         document.getElementById(i + ' + ' + right).click();
-    }
-}
-
-function vybuch(){
-    while(bombPole.length > 0){
-        let poziceBomby = bombPole[length];
-        bombPole = bombPole.filter(function(item) {
-            return item !== poziceBomby;
-        })
-        console.log(bombPole);
-        console.log("vybuch na miste:" + poziceBomby);
-        document.getElementById(poziceBomby).click();
     }
 }
 
